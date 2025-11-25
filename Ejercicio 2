@@ -1,0 +1,18 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    string texto;
+    cout<<"ingresar texto:";
+    getline(cin,texto);
+
+    int contador=0;
+    for(int i=0; i<texto.length(); i++) {
+        if (texto[i]!=' '){
+            contador++;
+        }
+    }
+    cout<<"\n" <<texto<<endl;
+    cout<<"el texto tiene"<<contador<<"letras(sin contar espacios)."<<endl;
+    return 0;
+}
