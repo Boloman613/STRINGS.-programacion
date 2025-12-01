@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+string unirPalabras(const vector<string>& palabras) {
+    string resultado = "";
+    for (int i = 0; i < palabras.size(); i++) {
+        resultado += palabras[i];
+        if (i < palabras.size() - 1) {
+            resultado += " "; 
+        }
+    }
+    return resultado;
+}
+
+int main() {
+    int n;
