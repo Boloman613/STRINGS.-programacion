@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string BorraCaracterDeCadena(string texto, char c) {
+    string resultado = "";
+
+    for (char t : texto) {
+        if (t != c) {          
+            resultado += t;
+        }
+    }
+    return resultado;
+}
+
+int main() {
+    string texto;
+    char c;
+
+    cout << "Texto: ";
+    ge
