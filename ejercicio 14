@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string Codifica(string texto, int c) {
+    string resultado = "";
+
+    for (char ch : texto) {
+        if (ch >= 'a' && ch <= 'z') {
+            resultado += char('a' + (ch - 'a' + c) % 26);
+        } else if (ch >= 'A' && ch <= 'Z') {
+            resultado += char('A' + (ch - 'A' + c) % 26);
+        } else {
+            resultado += ch;
+        }
+    }
+
+    return resultado;
+}
+
+int main() {
+    string texto;
+    int c;
+
+    cout << "Texto: ";
+    getline(cin, texto);
+
+    cout << "Cantidad de desplazamiento: ";
+    cin >> c;
+
+    string codificado = Codifica(texto, c);
+
+    cout << "Salida: " << codificado << endl;
+
+    return 0;
+}
