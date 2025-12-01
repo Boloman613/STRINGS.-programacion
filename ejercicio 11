@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string SubCadena(string cadena, int p, int n) {
+    int inicio = p - 1;
+
+    if (inicio < 0 || inicio >= cadena.length()) {
+        return "";
+    }
+
+    return cadena.substr(inicio, n);
+}
+
+int main() {
+    string cadena = "hoooola";
+    int p = 5;
+    int n = 3;
+
+    string resultado = SubCadena(cadena, p, n);
+
+    cout << "Salida: " << resultado << endl;
+
+    return 0;
+}
