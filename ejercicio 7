@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+string ordenarCadena(string cad) {
+    sort(cad.begin(), cad.end()); 
+    return cad;
+}
+
+int main() {
+    string cadena;
+
+    cout << "Introduce una cadena: ";
+    cin >> cadena;
+
+    string ordenada = ordenarCadena(cadena);
+
+    cout << "Salida: " << ordenada << endl;
+
+    return 0;
+}
